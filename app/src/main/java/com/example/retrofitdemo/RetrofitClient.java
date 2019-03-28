@@ -9,8 +9,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitClient {
 
     private static final String BASE_URL = "";
-    public static final String LOGIN_TOKEN = "";
-    public static final String URL = "";
+    public static final String LOGIN_TOKEN = "your_token";
+
     private static Retrofit retrofit;
 
     public static Retrofit getRetrofitClient(Context context) {
@@ -18,12 +18,13 @@ public class RetrofitClient {
         if (retrofit == null) {
 
             OkHttpClient okHttpClient = new OkHttpClient.Builder()
+                // For add Header
                     /*.addInterceptor(
                             new Interceptor() {
                                 @Override
                                 public Response intercept(Chain chain) throws IOException {
                                     Request request = chain.request().newBuilder()
-                                            .addHeader("login_token", "7DkOYDHnLkaD4xbJ8NstwipaRKrmFjTMWeBURiiCDtgH0sq8fS").build();
+                                            .addHeader("login_token", "your_token").build();
                                     return chain.proceed(request);
                                 }
                             })*/
