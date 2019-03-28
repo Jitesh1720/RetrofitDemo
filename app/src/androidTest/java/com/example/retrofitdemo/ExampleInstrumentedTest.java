@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.msp.retrofitdemo", appContext.getPackageName());
+        assertEquals("com.example.retrofitdemo", appContext.getPackageName());
     }
 }
