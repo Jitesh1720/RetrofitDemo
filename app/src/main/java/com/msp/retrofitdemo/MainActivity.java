@@ -257,8 +257,8 @@ public class MainActivity extends AppCompatActivity {
 
             mProgressBar.setVisibility(View.VISIBLE);
 
-            Call<Object> call = retrofitInterface.loginApi("8000195665", "12345678",
-                    "1", "654564545455", "gdjfghdfjghjdfhgjdfhjghdfjkh");
+            Call<Object> call = retrofitInterface.loginApi("", "",
+                    "", "", "");
             call.enqueue(new Callback<Object>() {
                 @Override
                 public void onResponse(Call<Object> call, retrofit2.Response<Object> response) {

@@ -13,8 +13,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
 
-    private static final String BASE_URL = "http://202.131.107.107/sd/paidkiya/api/v5/";
-    public static final String LOGIN_TOKEN = "7mgGH5aqnwSPTYEMgLltljeWSyZxmHlu4BbLGmc4S5TL3yyjjT";
+    private static final String BASE_URL = "";
+    public static final String LOGIN_TOKEN = "";
     public static final String URL = "";
     private static Retrofit retrofit;
 
