@@ -1,4 +1,4 @@
-package com.msp.retrofitdemo;
+package com.example.retrofitdemo;
 
 public class ApiResponse {
 

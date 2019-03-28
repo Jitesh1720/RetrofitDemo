@@ -1,4 +1,4 @@
-package com.msp.retrofitdemo;
+package com.example.retrofitdemo;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,9 +16,6 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 
 import com.google.gson.Gson;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;

@@ -1,7 +1,6 @@
-package com.msp.retrofitdemo;
+package com.example.retrofitdemo;
 
 import okhttp3.MultipartBody;
-import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
