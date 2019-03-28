@@ -1,0 +1,46 @@
+package com.msp.retrofitdemo;
+
+import android.content.Context;
+
+import java.io.IOException;
+
+import okhttp3.Interceptor;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+public class RetrofitClient {
+
+    private static final String BASE_URL = "http://202.131.107.107/sd/paidkiya/api/v5/";
+    public static final String LOGIN_TOKEN = "7mgGH5aqnwSPTYEMgLltljeWSyZxmHlu4BbLGmc4S5TL3yyjjT";
+    public static final String URL = "";
+    private static Retrofit retrofit;
+
+    public static Retrofit getRetrofitClient(Context context) {
+
+        if (retrofit == null) {
+
+            OkHttpClient okHttpClient = new OkHttpClient.Builder()
+                    /*.addInterceptor(
+                            new Interceptor() {
+                                @Override
+                                public Response intercept(Chain chain) throws IOException {
+                                    Request request = chain.request().newBuilder()
+                                            .addHeader("login_token", "7DkOYDHnLkaD4xbJ8NstwipaRKrmFjTMWeBURiiCDtgH0sq8fS").build();
+                                    return chain.proceed(request);
+                                }
+                            })*/
+                    .build();
+
+            retrofit = new Retrofit.Builder()
+                    .baseUrl(BASE_URL)
+                    .client(okHttpClient)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+        }
+        return retrofit;
+    }
+
+}
